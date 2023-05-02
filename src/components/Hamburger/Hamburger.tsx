@@ -20,6 +20,7 @@ export const Hamburger = () => {
             </button>
             <ul className={`burger-menu__items ${isOpen ? 'open' : ''}`}>
                 <UserInfo username={'Dmitry Podolnitski'} />
+                
             </ul>
         </div>
     );

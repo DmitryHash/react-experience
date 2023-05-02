@@ -1,0 +1,53 @@
+.tabs {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0px 40px 24px 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 150px;
+    border-bottom: 1px solid #DADADA;
+
+    &.tabs-all {
+        &.active {
+            &:hover {
+                border-bottom: 2px solid black;
+                color: #2231AA;
+            }
+        }
+
+        &.disabled {
+            color: #8D8E97;
+        }
+    }
+
+
+    &.tabs-myFavorites {
+        &.active {
+            &:hover {
+                border-bottom: 2px solid black;
+                color: #2231AA;
+            }
+        }
+
+        &.disabled {
+            color: #8D8E97;
+        }
+    }
+
+    &.tabs-popular {
+        &.active {
+            &:hover {
+                border-bottom: 2px solid black;
+                color: #2231AA;
+            }
+        }
+
+        &.disabled {
+            color: #8D8E97;
+        }
+    }
+};
+
