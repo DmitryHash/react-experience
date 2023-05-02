@@ -11,7 +11,6 @@ const generateInintials = (username: string) => {
    return username.split(' ').map((e) => e[0]).join('').toUpperCase();
 }
 
-
     return (
         <div className='userinfo'>
             <div className="userinfo__initials">{generateInintials(username)}</div>
