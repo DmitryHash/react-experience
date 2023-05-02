@@ -12,9 +12,11 @@ const generateInintials = (username: string) => {
 }
 
     return (
+        <>
         <div className='userinfo'>
             <div className="userinfo__initials">{generateInintials(username)}</div>
             <div className="userinfo__name">{username}</div>
         </div>
+        </>
     )
 }
