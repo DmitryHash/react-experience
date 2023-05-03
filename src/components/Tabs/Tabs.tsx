@@ -14,13 +14,11 @@ export const Tabs: FC<ITabs> = ({content, isDisabled, type}) => {
     const tabsClass = `tabs tabs-${type} ${isDisabled ? 'disabled' : 'active'}`
 
     return (
-
         <button 
             className={tabsClass}
             disabled={isDisabled}
         >
             {content}
         </button>
-
     )
 }

@@ -7,13 +7,12 @@
     outline: none;
     background-color: transparent;
     cursor: pointer;
-    margin-top: 150px;
-    border-bottom: 1px solid #DADADA;
+    border-bottom: 2px solid transparent;
 
-    &.tabs-all {
+    &.tabs-all, .tabsMain {
         &.active {
             &:hover {
-                border-bottom: 2px solid black;
+                border-bottom-color: black;
                 color: #2231AA;
             }
         }
@@ -23,11 +22,10 @@
         }
     }
 
-
     &.tabs-myFavorites {
         &.active {
             &:hover {
-                border-bottom: 2px solid black;
+                border-bottom-color: black;
                 color: #2231AA;
             }
         }
@@ -40,7 +38,7 @@
     &.tabs-popular {
         &.active {
             &:hover {
-                border-bottom: 2px solid black;
+                border-bottom-color: black;
                 color: #2231AA;
             }
         }
@@ -51,3 +49,11 @@
     }
 };
 
+.tabsMain {
+    margin-top: 150px;
+    display: flex;
+    gap: 120px;
+    border-bottom: 1px solid #DADADA;
+    max-width: 1000px;
+    width: 100%;
+}
