@@ -1,26 +1,24 @@
 import { FC } from 'react';
 import './Button.scss';
 
-
 interface IButton {
-    content: string;
-    isDisabled: boolean;
+    isDisabled?: boolean;
     type: 'primary' | 'secondary' | 'secondary2';
+    content: string;
+    onClick?: () => void;
 }
 
+export const Button: FC<IButton> = ({content, isDisabled, onClick, type}) => {
 
-export const Button: FC<IButton> = ({ content, isDisabled, type}) => {
-
-    const buttonClass = `button button-${type} ${isDisabled ? 'disabled' : 'active'}`
-
-
+    const buttonClass = `button button--${type} ${isDisabled ? 'disabled' : 'active'}`
 
     return (
-        <button 
-            className={buttonClass} 
-            disabled={isDisabled}
+        <button
+          className={buttonClass}
+          onClick={onClick}
+          disabled={isDisabled}
         >
-            {content} 
+            {content}
         </button>
     )
 }

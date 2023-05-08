@@ -1,12 +1,13 @@
 import { FC } from 'react'
-import './Title.scss'
+import './Typography.scss'
 
-interface ITitle {
+interface ITypography {
     content: string;
     type: 'H1' | 'H2' | 'H3' | 'subline' | 'textPrimary' | 'textSecondary';
+    isLink: boolean
 }
 
-export const Title: FC<ITitle> = ({ type, content }) => {
+export const Typography: FC<ITypography> = ({ type, content }) => {
 
     const typographyMap = {
         H1: <h1 className={type}>{content}</h1>,
