@@ -1,7 +1,5 @@
-import { BooleanLiteral } from 'typescript';
 import './Tabs.scss';
-import { type } from 'os';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { Tab } from '../Tab/Tab';
 
 interface ITabs {
@@ -9,13 +7,20 @@ interface ITabs {
 }
 
 export const Tabs: FC<ITabs> = () => {
+    const [tabs, setTabs] = useState([
+        {id: 1, title: 'All', isActive: true, isDisabled: false},
+        {id: 2, title: 'My favorites', isActive: false, isDisabled: false},
+        {id: 3, title: 'Popular', isActive: false, isDisabled: true},
+    ]);
 
 
     return (
         <ul className='tabs'>
-            <Tab title='All'/>
-            <Tab title='My favorites' isActive />
-            <Tab title='Popular' isDisabled/>
+            {tabs.map(({id, title, isActive, isDisabled}) => {
+                return (
+                    <Tab title={title} key={id} isActive={isActive} isDisabled={isDisabled}/>
+                )
+            })}
         </ul>
     )
 }

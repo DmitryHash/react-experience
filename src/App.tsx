@@ -1,4 +1,5 @@
 import './App.scss';
+import { Example } from './components/Example/Example';
 import { Button } from './components/Button/Button';
 import { Hamburger } from './components/Hamburger/Hamburger';
 import { Tabs } from './components/Tabs/Tabs';
@@ -8,7 +9,7 @@ export const App = () => {
 
   return (
     <div>
-      <div className='button'> 
+      {/* <div className='button'> 
       <Button content={'Privet'} isDisabled={false} type={'primary'} />
       <Button content={'Privet'} isDisabled type={'secondary'} />
       <Button content={'Privet'} isDisabled={false} type={'secondary2'} />
@@ -23,7 +24,11 @@ export const App = () => {
       <br/>
       <br/>
       <br/>
+      <br/>
+      <br/>
+      <Tabs /> */}
       <Tabs />
+      <Example />
     </div>
   );
 }
