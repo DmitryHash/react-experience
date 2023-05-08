@@ -2,23 +2,20 @@ import { BooleanLiteral } from 'typescript';
 import './Tabs.scss';
 import { type } from 'os';
 import { FC } from 'react';
+import { Tab } from '../Tab/Tab';
 
 interface ITabs {
-    content: string
-    isDisabled: boolean;
-    type: 'all' | 'myFavorites' | 'popular';
+
 }
 
-export const Tabs: FC<ITabs> = ({content, isDisabled, type}) => {
+export const Tabs: FC<ITabs> = () => {
 
-    const tabsClass = `tabs tabs-${type} ${isDisabled ? 'disabled' : 'active'}`
 
     return (
-        <button 
-            className={tabsClass}
-            disabled={isDisabled}
-        >
-            {content}
-        </button>
+        <ul className='tabs'>
+            <Tab title='All'/>
+            <Tab title='My favorites' isActive />
+            <Tab title='Popular' isDisabled/>
+        </ul>
     )
 }

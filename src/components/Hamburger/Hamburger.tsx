@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import './Hamburger.scss'
 import { UserInfo } from '../UserInfo/UserInfo';
 
-export const Hamburger = () => {
+interface IHamburger {
+    
+}
+
+export const Hamburger: FC<IHamburger> = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {

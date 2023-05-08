@@ -13,13 +13,17 @@ export const App = () => {
       <Button content={'Privet'} isDisabled type={'secondary'} />
       <Button content={'Privet'} isDisabled={false} type={'secondary2'} />
       </div>
-      <Title />
+      <Title content={'Privet'} type={'H1'} />
+      <Title content={'Privet'} type={'H2'} />
+      <Title content={'Privet'} type={'H3'} />
+      <Title content={'Privet'} type={'subline'} />
+      <Title content={'Privet'} type={'textSecondary'} />
+      <Title content={'Privet'} type={'textPrimary'} />
       <Hamburger />
-      <div className='tabsMain'>
-      <Tabs content='All' isDisabled={false} type={'all'}/>
-      <Tabs content='My Favorites' isDisabled={false} type={'myFavorites'}/>
-      <Tabs content='Popular' isDisabled={false} type={'popular'}/>
-      </div>
+      <br/>
+      <br/>
+      <br/>
+      <Tabs />
     </div>
   );
 }

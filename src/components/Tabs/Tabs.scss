@@ -1,59 +1,7 @@
 .tabs {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 0px 40px 24px 40px;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-
-    &.tabs-all, .tabsMain {
-        &.active {
-            &:hover {
-                border-bottom-color: black;
-                color: #2231AA;
-            }
-        }
-
-        &.disabled {
-            color: #8D8E97;
-        }
-    }
-
-    &.tabs-myFavorites {
-        &.active {
-            &:hover {
-                border-bottom-color: black;
-                color: #2231AA;
-            }
-        }
-
-        &.disabled {
-            color: #8D8E97;
-        }
-    }
-
-    &.tabs-popular {
-        &.active {
-            &:hover {
-                border-bottom-color: black;
-                color: #2231AA;
-            }
-        }
-
-        &.disabled {
-            color: #8D8E97;
-        }
-    }
-};
-
-.tabsMain {
-    margin-top: 150px;
     display: flex;
-    gap: 120px;
-    border-bottom: 1px solid #DADADA;
-    max-width: 1000px;
-    width: 100%;
+    border-bottom: 1px solid #dadada;
+    padding-bottom: 24px;
+    column-gap: 24px;
+    font-weight: 600;
 }
