@@ -1,16 +1,15 @@
 import './App.scss';
-import { Button } from './components/Button/Button';
-import { CardList } from './components/CardList/CardList';
-import { Form } from './components/Form/Form';
-import { Header } from './components/Header/Header';
-import { MenuCard } from './components/MenuCard/MenuCard';
+import { PageTemplate } from './components/PageTemplate/PageTemplate';
+import { SignUp } from './page/SignUp/SignUp';
 
 
 export const App = () => {
 
   return (
     <div>
-      <Header />
+      <PageTemplate>
+        <SignUp />
+      </PageTemplate>
     </div>
   );
 }

@@ -1,52 +1,49 @@
 import { FC, useState } from 'react';
-import { Hamburger } from '../Hamburger/Hamburger';
-import { Input } from '../Input/Input';
-import { IconButton } from '../IconButton/IconButton';
-import cancel from '../../assets/icons/cancel.svg';
-import search from '../../assets/icons/menu.svg'
-import './Header.scss';
 import { UserInfo } from '../UserInfo/UserInfo';
-
-
+import { IconButton } from '../IconButton/IconButton';
+import search from '../../assets/icons/search.svg';
+import cancel from '../../assets/icons/cancel.svg';
+import './Header.scss';
+import { Hamburger } from '../Hamburger/Hamburger';
 
 export const Header: FC = () => {
     const [openSearch, setOpenSearch] = useState(false);
-    const [searchValue, setsearchValue] = useState('');
+    const [searchValue, setSearchValue] = useState('');
 
-    const HandleToggleClick = () => {
+    const handleToggleClick = () => {
         setOpenSearch(!openSearch);
-        setsearchValue('');
-    }
+        setSearchValue('');
+      };
 
-    const handleChangeSearch = (newValue: string) => {
-        setsearchValue(searchValue)
-    }
+      const handleChangeSearch = (newValue: string) => {
+        setSearchValue(newValue);
+      }
 
     return (
         <header className='header'>
             <Hamburger />
             {openSearch && (
                 <div className='header__search-input'>
-                    <input 
+                    <input
                         type="text"
+                        className='header__search-input'
                         placeholder='Search...'
                         value={searchValue}
-                        onChange = {(e) => handleChangeSearch(e.target.value)}
-                        className='header__search-input'
+                        onChange={(e) => handleChangeSearch(e.target.value)} 
                     />
                 </div>
             )}
-            <div>
-                <div>
-                    <IconButton onClick={HandleToggleClick}>
+            <div className='header__box'>
+                <div className='header__search'>
+                    <IconButton onClick={handleToggleClick}>
                         {openSearch ? (
-                            <img src={cancel} alt='cancel' />
+                            <img src={cancel} alt="cancel" />
                         ) : (
-                            <img src={search} alt='search' />
+                            <img src={search} alt="search" />
                         )}
                     </IconButton>
-                </div>
-                <UserInfo username={'Dmitry Podolnitski'} />
+                 </div>
+                <UserInfo username='Dmitry Podolnitski'/>
             </div>
         </header>
     )

@@ -10,19 +10,28 @@ interface IInput {
     errorMessage?: string;
 }
 
-export const Input: FC<IInput> = ({handleChange, title, value, errorMessage, isDisabled = false, placeholder}) => {
+export const Input: FC<IInput> = ({
+    value,
+    handleChange,
+    placeholder,
+    title,
+    isDisabled = false,
+    errorMessage
+}) => {
+
     return (
         <div className='input-wrapper'>
-            <label className='label' htmlFor="input-text">{title}</label>
+            <label className='label' htmlFor={`input-${title}`}>{title}</label>
             <input
-               type="text"
-               placeholder={placeholder}
-               disabled={isDisabled}
-               id='input-text'
-               value={value}
-               onChange={(e) => handleChange(e.target.value)}
-               className={`input ${errorMessage && 'error'}`} />
-               {errorMessage && <div className='errorMessage'>{errorMessage}</div>}
+                className={`input ${errorMessage && 'error'}`}
+                placeholder={placeholder}
+                disabled={isDisabled}
+                type="text"
+                id={`input-${title}`}
+                value={value}
+                onChange={(e) => handleChange(e.target.value)}
+            />
+            {errorMessage && <div className='errorMesage'>{errorMessage}</div>}
         </div>
     )
 };

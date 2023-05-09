@@ -1,5 +1,7 @@
 import { FC, ReactNode } from 'react';
-import './PageTemplate.scss';
+import { Header } from '../Header/Header';
+import { Container } from '../Container/Container';
+import { Footer } from '../Footer/Footer';
 
 interface IPageTemplate {
     children: ReactNode;
@@ -8,10 +10,11 @@ interface IPageTemplate {
 export const PageTemplate: FC<IPageTemplate> = ({children}) => {
     return (
         <div>
-            {/* <Header />
+            <Header />
             <Container>
                 {children}
-            </Container> */}
+            </Container>
+            <Footer />
         </div>
     )
 };

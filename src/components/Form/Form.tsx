@@ -3,56 +3,61 @@ import { Input } from '../Input/Input';
 import './Form.scss';
 import { Textarea } from '../Textarea/Textarea';
 
-
-
 export const Form: FC = () => {
     const [name, setName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [text, setText] = useState('');
     const [age, setAge] = useState('');
-
+    const [text, setText] = useState('');
 
     const handleChangeName = (newName: string) => {
         setName(newName);
     }
-    const handleChangeLastName = (newLastName: string) => {
-        setLastName(newLastName);
+
+    const handleChangeLastName = (newName: string) => {
+        setLastName(newName);
     }
-    const handleChangeAge = (newAge: string) => {
-        setAge(newAge);
+
+    const handleChangeAge = (newName: string) => {
+        setAge(newName);
     }
+
     const handleChangeText = (newName: string) => {
         setText(newName);
     }
 
     return (
         <form>
-            <Input 
+            <Input
                 title='Title'
-                placeholder='enter ur text'
+                placeholder='some placeholder'
                 value={name}
                 handleChange={handleChangeName}
             />
-            <Input 
-                title='Title'
-                placeholder='enter ur text'
-                value={age}
-                isDisabled
-                handleChange={handleChangeAge}
-            />
-            <Input 
-                title='Title'
-                placeholder='enter ur text'
+            <Input
+                title='Title2'
+                placeholder='some placeholder'
                 value={lastName}
-                errorMessage='ERRORRR'
+                isDisabled
                 handleChange={handleChangeLastName}
             />
+            <Input
+                title='Title'
+                placeholder='some placeholder'
+                value={age}
+                errorMessage='У тебя ошибка!'
+                handleChange={handleChangeAge}
+            />
             <br/>
             <br/>
             <br/>
             <br/>
-
-            <Textarea title='someTitle' value={text} placeholder='placeholder' handleChange={handleChangeText}/>
+            <br/>
+            <Textarea
+                title='Title'
+                value={text}
+                placeholder='placeholder'
+                handleChange={handleChangeText}
+            />
         </form>
     )
 };
