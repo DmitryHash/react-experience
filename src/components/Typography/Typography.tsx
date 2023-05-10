@@ -4,7 +4,8 @@ import './Typography.scss'
 interface ITypography {
     content: string;
     type: 'H1' | 'H2' | 'H3' | 'subline' | 'textPrimary' | 'textSecondary';
-    isLink: boolean
+    isLink?: boolean
+    className?: string
 }
 
 export const Typography: FC<ITypography> = ({ type, content }) => {
