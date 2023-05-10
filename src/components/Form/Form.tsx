@@ -1,6 +1,5 @@
 import { FC, useState } from 'react';
 import { Input } from '../Input/Input';
-import './Form.scss';
 import { Textarea } from '../Textarea/Textarea';
 
 export const Form: FC = () => {
