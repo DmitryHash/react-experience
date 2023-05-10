@@ -24,10 +24,11 @@
             line-height: 20px;
             font-weight: 500;
             color: #8D8E97;
+            
+            &-link{
+                color: #2231aa;
+            }
         }
 
-        &-link {
-            color: #2231aa;
-        }
     }
 }

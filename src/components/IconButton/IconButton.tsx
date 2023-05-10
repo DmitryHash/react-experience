@@ -3,7 +3,7 @@ import './IconButton.scss';
 
 interface IIconButton {
     onClick: () => void;
-    children?: ReactNode;
+    children: ReactNode;
 }
 
 export const IconButton: FC<IIconButton> = ({onClick, children}) => {

@@ -13,11 +13,12 @@ export const Textarea: FC<ITextarea> = ({value, handleChange, title, placeholder
         <div className='textarea-wrapper'>
             <label className='label' htmlFor="textarea-text">{title}</label>
             <textarea
-               className="textarea"
-               placeholder={placeholder}
-               id='textarea-text'
-               value={value}
-               onChange={(e) => handleChange(e.target.value)} />
+                className='textarea'
+                placeholder={placeholder}
+                id='textarea-text'
+                value={value}
+                onChange={(e) => handleChange(e.target.value)}
+            />
         </div>
     )
 };

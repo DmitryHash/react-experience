@@ -1,5 +1,5 @@
 {
-  "name": "react-experience",
+  "name": "tms-group-fe43",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,7 +41,6 @@
     ]
   },
   "devDependencies": {
-    "@types/mime": "^3.0.1",
     "sass": "^1.62.1"
   }
 }

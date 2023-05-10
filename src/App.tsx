@@ -1,18 +1,18 @@
-import './App.scss';
-import { PageTemplate } from './components/PageTemplate/PageTemplate';
-import { RegConfirm } from './page/RegConfirm/RegConfirm';
-import { SignIn } from './page/SignIn/SignIn';
-import { SignUp } from './page/SignUp/SignUp';
-import { Success } from './page/Success/Success';
-
+import { PageTemplate } from "./components/PageTemplate/PageTemplate";
+import { RegConfirm } from "./pages/RegConfirm/RegConfirm";
+import { SignIn } from "./pages/SignIn/SignIn";
+// import { RegistrationConfirm } from "./pages/RegistrationConfirm/RegistrationConfirm";
+import { SignUp } from "./pages/SignUp/SignUp";
+import { Success } from "./pages/Success/Success";
 
 export const App = () => {
 
+
   return (
-    <div>
+    <>
       <PageTemplate>
         <SignIn />
       </PageTemplate>
-    </div>
+    </>
   );
 }

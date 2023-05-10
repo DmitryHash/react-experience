@@ -4,17 +4,17 @@ import { Container } from '../Container/Container';
 import { Footer } from '../Footer/Footer';
 
 interface IPageTemplate {
-    children: ReactNode;
+    children?: ReactNode
 }
 
 export const PageTemplate: FC<IPageTemplate> = ({children}) => {
     return (
-        <div>
+        <>
             <Header />
             <Container>
                 {children}
+                <Footer />
             </Container>
-            <Footer />
-        </div>
+        </>
     )
 };

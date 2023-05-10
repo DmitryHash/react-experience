@@ -9,9 +9,7 @@ interface ITab {
 
 export const Tab: FC<ITab> = ({title, isActive = false, isDisabled = false}) => {
 
-    const buttonClass = `tab ${isDisabled && 'disabled'} ${isActive && 'active'}`
+    const buttonClass = `tab ${isDisabled && 'disabled'} ${isActive && 'active'}`;
 
-    return (
-        <li className={buttonClass}>{title}</li>
-    )
+    return <li className={buttonClass}>{title}</li>
 };

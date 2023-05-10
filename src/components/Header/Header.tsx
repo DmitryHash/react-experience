@@ -1,10 +1,10 @@
 import { FC, useState } from 'react';
+import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { IconButton } from '../IconButton/IconButton';
 import search from '../../assets/icons/search.svg';
 import cancel from '../../assets/icons/cancel.svg';
 import './Header.scss';
-import { Hamburger } from '../Hamburger/Hamburger';
 
 export const Header: FC = () => {
     const [openSearch, setOpenSearch] = useState(false);
@@ -21,7 +21,7 @@ export const Header: FC = () => {
 
     return (
         <header className='header'>
-            <Hamburger />
+            <BurgerMenu />
             {openSearch && (
                 <div className='header__search-input'>
                     <input
