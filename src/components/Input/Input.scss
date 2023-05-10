@@ -3,43 +3,43 @@
 
     .label {
         display: block;
-        font-weight: 600;
+        margin-bottom: 8px;
         font-size: 16px;
         line-height: 20px;
-        margin-bottom: 8px;
+        font-weight: 600;
     }
 
     .input {
-        width: 100%;
-        border-radius: 2px;
+        width: 93%;
         height: 56px;
         padding: 0 20px;
+        border-radius: 2px;
+        border: 2px solid #fff;
         outline: none;
         font-size: 16px;
         font-weight: 400;
-        border: 2px solid ;
 
         &:focus {
             border-color: #dadada;
         }
 
         &:disabled {
+            color: #8D8E97;
+            background-color: #E8E8E8;
             cursor: not-allowed;
-            color: #8d8e97;
-            background-color: #e8e8e8;
         }
 
         &.error {
-            border-color: #fd3419;
+            border-color: #FD3419;
         }
     }
 
-    .errorMessage {
+    .errorMesage {
         position: absolute;
         bottom: -32px;
         font-size: 16px;
         line-height: 20px;
         font-weight: 400;
-        color: #fd3419;
+        color: #FD3419;
     }
 }
