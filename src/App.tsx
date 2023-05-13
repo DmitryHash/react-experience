@@ -1,4 +1,5 @@
 import { PageTemplate } from "./components/PageTemplate/PageTemplate";
+import { ContentPage } from "./pages/ContentPage/ContentPage";
 import { RegConfirm } from "./pages/RegConfirm/RegConfirm";
 import { SignIn } from "./pages/SignIn/SignIn";
 // import { RegistrationConfirm } from "./pages/RegistrationConfirm/RegistrationConfirm";
@@ -11,7 +12,7 @@ export const App = () => {
   return (
     <>
       <PageTemplate>
-        <SignIn />
+        <ContentPage />
       </PageTemplate>
     </>
   );
