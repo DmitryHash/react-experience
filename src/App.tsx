@@ -1,3 +1,4 @@
+import { Form } from "./components/Form/Form";
 import { PageTemplate } from "./components/PageTemplate/PageTemplate";
 import { RegConfirm } from "./pages/RegConfirm/RegConfirm";
 import { SignIn } from "./pages/SignIn/SignIn";
@@ -11,7 +12,7 @@ export const App = () => {
   return (
     <>
       <PageTemplate>
-        <SignIn />
+        <Form />
       </PageTemplate>
     </>
   );
