@@ -1,10 +1,8 @@
 import { Form } from "./components/Form/Form";
 import { PageTemplate } from "./components/PageTemplate/PageTemplate";
-import { RegConfirm } from "./pages/RegConfirm/RegConfirm";
-import { SignIn } from "./pages/SignIn/SignIn";
-// import { RegistrationConfirm } from "./pages/RegistrationConfirm/RegistrationConfirm";
-import { SignUp } from "./pages/SignUp/SignUp";
-import { Success } from "./pages/Success/Success";
+import { ContentPage } from "./pages/ContentPage/ContentPage";
+
+
 
 export const App = () => {
 
