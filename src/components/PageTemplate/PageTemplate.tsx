@@ -7,14 +7,12 @@ interface IPageTemplate {
     children?: ReactNode
 }
 
-export const PageTemplate: FC<IPageTemplate> = ({children}) => {
-    return (
-        <>
-            <Header />
-            <Container>
-                {children}
-                <Footer />
-            </Container>
-        </>
-    )
-};
+export const PageTemplate: FC<IPageTemplate> = ({children}) => (
+    <>
+        <Header />
+        <Container>
+            {children}
+            <Footer />
+        </Container>
+    </>
+)
