@@ -7,7 +7,7 @@ interface IButton {
     isDisabled?: boolean;
     type: 'primary' | 'secondary' | 'secondary2';
     content: string;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 export const Button: FC<IButton> = ({content, isDisabled = false, onClick, type}) => {

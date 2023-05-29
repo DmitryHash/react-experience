@@ -19,7 +19,7 @@ export const FullCard: FC<IFullCard> = ({id, text, title, image, date}) => {
             <div className='full-card__content'>
                 <div>
                     <DateCard date={date} />
-                    <Typography content={title} type='H2' isLink/>
+                    <Typography content={title} type='H2' />
                     <p className='full-card__text'>{text}</p>
                     <div></div>
                 </div>

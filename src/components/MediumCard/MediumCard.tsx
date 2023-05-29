@@ -18,7 +18,7 @@ export const MediumCard: FC<IMediumCard> = ({id, date, image, title}) => {
                 <img className='medium-card__img' src={image} alt={title} />
             </div>
             <DateCard date={date} />
-            <Typography content={title} type='H3' isLink/>
+            <Typography content={title} type='H3' />
             <div className='medium-card__actions'>
                 <ActionsCard />
             </div>

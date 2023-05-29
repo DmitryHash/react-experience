@@ -32,7 +32,7 @@ export const SignUp: FC = () => {
 
     return (
         <div className='sign-up'>
-            <Typography content='Sign Up' type='H1' isLink={false}/>
+            <Typography content='Sign Up' type='H1' />
             <form className='sign-up__form'>
                 <Input
                     title='Name'

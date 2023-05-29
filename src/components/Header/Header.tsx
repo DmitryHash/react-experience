@@ -46,7 +46,7 @@ export const Header: FC = () => {
                         )}
                     </IconButton>
                  </div>
-                <UserInfo username='Artem Malkin'/>
+                <UserInfo username='Dmitry Podolnitski'/>
             </div>
         </header>
     )

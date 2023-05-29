@@ -17,7 +17,7 @@ export const SmallCard: FC<ISmallCard> = ({id, date, image, title}) => {
             <div className='small-card__content'>
                 <div>
                     <DateCard date={date} />
-                    <Typography content={title} type='H3' isLink/>
+                    <Typography content={title} type='H3'/>
                 </div>
                 <div>
                     <div className='small-card__img-box'>
