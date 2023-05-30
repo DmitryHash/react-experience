@@ -1,16 +1,12 @@
-import { Form } from "./components/Form/Form";
 import { PageTemplate } from "./components/PageTemplate/PageTemplate";
-import { ContentPage } from "./pages/ContentPage/ContentPage";
-
-
+import { Router } from "./routes/Router";
 
 export const App = () => {
-
 
   return (
     <>
       <PageTemplate>
-        <Form />
+        <Router />
       </PageTemplate>
     </>
   );
