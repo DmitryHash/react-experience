@@ -100,7 +100,6 @@ export const SignUpPage: FC = () => {
         <div className='sign-up'>
             <Breadcrumbs path={[createBackToHomePath]} />
             <Typography content='Sign Up' type='H1'/>
-            <Typography content='Sign Up' type='H1' />
             <form className='sign-up__form'>
                 <Input
                     title='Name'

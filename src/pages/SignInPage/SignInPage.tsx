@@ -63,7 +63,7 @@ export const SignInPage: FC = () => {
                         Forgot password?
                     </a>
                 </div>
-                <Button content='Sign In' onClick={handleSubmit} type='primary'/>
+                <Button content='Sign Ip' onClick={handleSubmit} type='primary'/>
                 <p className='sign-in__form-description'>
                     Don’t have an account? {' '}
                 <Link to='/sign-up' className='sign-in__form-link'>

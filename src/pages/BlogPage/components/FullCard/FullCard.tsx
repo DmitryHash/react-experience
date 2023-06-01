@@ -22,13 +22,9 @@ export const FullCard: FC<IFullCard> = ({id, text, title, image, date, onClick, 
             <div className='full-card__content'>
                 <div>
                     <DateCard date={date} />
-<<<<<<<< HEAD:src/pages/BlogPage/components/FullCard/FullCard.tsx
                     <button className='full-card__btn' onClick={() => onClick(id)}>
                         <Typography content={title} type='H2'/>
                     </button>
-========
-                    <Typography content={title} type='H2' />
->>>>>>>> 33cf49f2f2b35d27ddb7a67d6220490b027acff4:src/components/FullCard/FullCard.tsx
                     <p className='full-card__text'>{text}</p>
                     <div></div>
                 </div>
