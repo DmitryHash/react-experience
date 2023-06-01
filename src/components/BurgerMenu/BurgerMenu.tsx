@@ -16,7 +16,9 @@ export const BurgerMenu: FC = () => {
 
     const options = [
         {id: 1, name: 'Home', url: './posts'},
-        {id: 2, name: 'Add post', url: ''},
+        {id: 2, name: 'Trends', url: ''},
+        {id: 3, name: 'Favorites', url: ''},
+        {id: 4, name: 'Settings', url: ''},
     ] 
 
     const handleClick = () => {
