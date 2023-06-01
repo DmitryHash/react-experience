@@ -1,14 +1,14 @@
 .burgerMenu {
     width: 84px;
     height: 84px;
-    background-color: #2231aa;
+    background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     
     &__btn-box {
-      border-right: 1px solid #5360CD;
+      // border-right: 1px solid #5360CD;
     }
 
         &__content {

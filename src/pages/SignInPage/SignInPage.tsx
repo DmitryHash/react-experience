@@ -41,8 +41,8 @@ export const SignInPage: FC = () => {
     return (
         <div className='sign-in'>
             <Breadcrumbs path={[createBackToHomePath]} />
-            <Typography content='Sign In' type='H1'/>
             <form className='sign-in__form'>
+            <Typography content='Sign In' type='H2'/>
                 <Input
                     title='Email'
                     placeholder='Your email'

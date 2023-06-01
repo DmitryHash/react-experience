@@ -59,23 +59,23 @@ export const SignUpPage: FC = () => {
         }
 
         if (!username) {
-            newErrors.username = 'Введите логин';
+            newErrors.username = 'Name is required';
         }
         if (!email) {
-            newErrors.email = 'Введите Email';
+            newErrors.email = 'Email is required';
         } else if (!/\S+@\S+\.\S+/.test(email)) {
-            newErrors.email = 'Email недействителен';
+            newErrors.email = 'Email is invalid';
         }
         if (!password) {
-            newErrors.password = 'Введите пароль';
+            newErrors.password = 'Password is required';
         }  else if (password.length < 6) {
-            newErrors.password = 'Пароль должен содержать не менее 6 символов';
+            newErrors.password = 'Password must be at least 6 characters long';
           }
         if (!confirmPassword) {
-            newErrors.confirmPassword = 'Повторите пароль';
+            newErrors.confirmPassword = 'Confirm password is required';
         } else if (password !== confirmPassword) {
-            newErrors.confirmPassword = 'Пароли не совпадают';
-            newErrors.password = 'Пароли не совпадают';
+            newErrors.confirmPassword = 'Passwords do not match';
+            newErrors.password = 'Passwords do not match';
         }
         
         let isValid = Object.values(newErrors).every(error => error === '');
@@ -100,40 +100,40 @@ export const SignUpPage: FC = () => {
         <div className='sign-up'>
             <Breadcrumbs path={[createBackToHomePath]} />
             <form className='sign-up__form'>
-            <Typography content='Регистрация' type='H2'/>
+            <Typography content='Sign Up' type='H2'/>
                 <Input
-                    title='Логин'
-                    placeholder='Ваш логин'
+                    title='Name'
+                    placeholder='Your name'
                     value={username}
                     handleChange={handleChangeName}
                     errorMessage={errors.username}
                 />
                 <Input
                     title='Email'
-                    placeholder='Ваш email'
+                    placeholder='Your email'
                     value={email}
                     handleChange={handleChangeEmail}
                     errorMessage={errors.email}
                 />
                 <Input
-                    title='Пароль'
-                    placeholder='Ваш пароль'
+                    title='Password'
+                    placeholder='Your password'
                     value={password}
                     handleChange={handleChangePassword}
                     errorMessage={errors.password}
                 />
                 <Input
-                    title='Повторите пароль'
-                    placeholder='Повторите пароль'
+                    title='Confirm password'
+                    placeholder='Confirm password'
                     value={confirmPassword}
                     handleChange={handleChangeConfirmPassword}
                     errorMessage={errors.confirmPassword}
                 />
-                <Button content='Регистарция' onClick={handleSubmit} type='primary' />
+                <Button content='Sign Up' onClick={handleSubmit} type='primary' />
                 <p className='sign-up__form-description'>
-                    Уже есть аккаунт? {' '}
+                    Already have an account? {' '}
                 <Link to='/sign-in' className='sign-up__form-link'>
-                    Войти
+                    Sign In
                 </Link>
                 </p>
             </form>

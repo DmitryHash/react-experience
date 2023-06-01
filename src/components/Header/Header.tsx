@@ -3,19 +3,20 @@ import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { IconButton } from '../IconButton/IconButton';
 import './Header.scss';
-import { CancelIcon, UserIcon, SearchIcon } from '../../assets/icons';
+import { CancelIcon, UserIcon, SearchIcon, Logotype } from '../../assets/icons';
 import { useNavigate } from 'react-router';
+
 
 export const Header: FC = () => {
     const navigate = useNavigate();
     const isLogged = false;
-    const [openSearch, setOpenSearch] = useState(false);
+    // const [openSearch, setOpenSearch] = useState(false);
     const [searchValue, setSearchValue] = useState('');
 
-    const handleToggleClick = () => {
-        setOpenSearch(!openSearch);
-        setSearchValue('');
-      };
+    // const handleToggleClick = () => {
+    //     setOpenSearch(!openSearch);
+    //     setSearchValue('');
+    //   };
 
       const handleChangeSearch = (newValue: string) => {
         setSearchValue(newValue);
@@ -28,8 +29,8 @@ export const Header: FC = () => {
     return (
         <header className='header'>
             <BurgerMenu />
-            {openSearch && (
-                <div className='header__search-input'>
+            <Logotype />
+                <div className='header__search-box'>
                     <input
                         type="text"
                         className='header__search-input'
@@ -38,19 +39,18 @@ export const Header: FC = () => {
                         onChange={(e) => handleChangeSearch(e.target.value)} 
                     />
                 </div>
-            )}
             <div className='header__box'>
                 <div className='header__search'>
-                    <IconButton onClick={handleToggleClick} type='header'>
+                    {/* <IconButton onClick={handleToggleClick} type='header'>
                         {openSearch ? (
                             <CancelIcon />
                         ) : (
                             <SearchIcon />
                         )}
-                    </IconButton>
+                    </IconButton> */}
                  </div>
                  {isLogged ? (
-                     <UserInfo username='Artem Malkin'/>
+                     <UserInfo username='Dmitry Podolnitski '/>
                  ) : (
                     <IconButton onClick={handClickToSignIn} type='header'>
                         <UserIcon />
