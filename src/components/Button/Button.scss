@@ -1,19 +1,19 @@
 .button {
     width: 100%;
-    border: 1px solid #fff;
+    border: none;
     font-size: 18px;
     font-weight: 600;
     padding: 16px 32px;
-    border-radius: 2px;
+    border-radius: 10px;
     cursor: pointer;
 
     &.button--primary {
         color: #fff;
-        background-color: #2231aa;
+        background-color: #7B61FF;
 
         &.active {
             &:hover {
-                background-color: #5360cd;
+                background-color: #917CFF;
             }
         }
     

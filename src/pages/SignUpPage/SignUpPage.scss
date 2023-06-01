@@ -1,14 +1,17 @@
 
 .sign-up {
+    background: url();
     
     &__form {
         margin: 72px auto 0;
         max-width: 624px;
-        border: 1px solid #DADADA;
+        border: 1px solid transparent;
         padding: 40px;
         display: flex;
         flex-direction: column;
         row-gap: 40px;
+        background-color: #242426;
+        border-radius: 10px;
 
         &-description { 
             text-align: center;
