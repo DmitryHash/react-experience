@@ -7,9 +7,10 @@ interface IInput {
     title: string;
     placeholder?: string;
     isDisabled?: boolean;
-    errorMessage?: string;
+    errorMessage?: string | string[];
     inputRef?: RefObject<HTMLInputElement>;
-    handleKeyUp?: (e: KeyboardEvent<HTMLInputElement>) => void
+    handleKeyUp?: (e: KeyboardEvent<HTMLInputElement>) => void;
+    type?: 'text' | 'password';
 }
 
 export const Input: FC<IInput> = ({
@@ -20,8 +21,11 @@ export const Input: FC<IInput> = ({
     isDisabled = false,
     errorMessage,
     inputRef,
-    handleKeyUp
+    handleKeyUp,
+    type = 'text',
 }) => {
+
+    const generatErrorMessage = (message: string | string[]) => typeof message === 'string' ? message : message.join(' ');
 
     return (
         <div className='input-wrapper'>
@@ -30,14 +34,15 @@ export const Input: FC<IInput> = ({
                 className={`input ${errorMessage && 'error'}`}
                 placeholder={placeholder}
                 disabled={isDisabled}
-                type="text"
+                type={type}
                 id={`input-${title}`}
                 value={value}
                 onChange={(e) => handleChange(e.target.value)}
                 ref={inputRef}
                 onKeyUp={handleKeyUp}
+                autoComplete='off'
             />
-            {errorMessage && <div className='errorMesage'>{errorMessage}</div>}
+            {errorMessage && <div className='errorMesage'>{generatErrorMessage(errorMessage)}</div>}
         </div>
     )
 };
