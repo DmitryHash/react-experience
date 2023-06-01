@@ -21,9 +21,13 @@ export const MediumCard: FC<IMediumCard> = ({id, date, image, title, onClick, di
                 <img className='medium-card__img' src={image} alt={title} />
             </div>
             <DateCard date={date} />
+<<<<<<<< HEAD:src/pages/BlogPage/components/MediumCard/MediumCard.tsx
             <button className='medium-card__btn' onClick={() => onClick(id)}>
                 <Typography content={title} type='H3'/>
             </button>
+========
+            <Typography content={title} type='H3' />
+>>>>>>>> 33cf49f2f2b35d27ddb7a67d6220490b027acff4:src/components/MediumCard/MediumCard.tsx
             <div className='medium-card__actions'>
                 <ActionsCard id={id} dislike={dislike} like={like}/>
             </div>

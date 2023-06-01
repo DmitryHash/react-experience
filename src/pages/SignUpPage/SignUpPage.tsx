@@ -98,8 +98,12 @@ export const SignUpPage: FC = () => {
 
     return (
         <div className='sign-up'>
+<<<<<<<< HEAD:src/pages/SignUpPage/SignUpPage.tsx
             <Breadcrumbs path={[createBackToHomePath]} />
             <Typography content='Sign Up' type='H1'/>
+========
+            <Typography content='Sign Up' type='H1' />
+>>>>>>>> 33cf49f2f2b35d27ddb7a67d6220490b027acff4:src/pages/SignUp/SignUp.tsx
             <form className='sign-up__form'>
                 <Input
                     title='Name'
